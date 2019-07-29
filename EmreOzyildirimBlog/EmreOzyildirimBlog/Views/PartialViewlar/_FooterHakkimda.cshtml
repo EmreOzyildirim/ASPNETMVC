@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EmreOzyildirimBlog.Models.FooterHakkimdaModel>
+
+<div class="col-md-4 footer-hakkimda">
+    @if (Model.Count() == 0)
+    {
+
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            @if (item.HakkimdaBaslik == null)
+            {
+                <div class="footer-hakkimda-baslik">
+                    Hakkımda
+                </div>
+            }
+            else
+            {
+                <div class="footer-hakkimda-baslik">
+                    @item.HakkimdaBaslik
+                </div>
+            }
+            <div class="footer-hakkimda-aciklama">
+                @if (true)
+                {
+                    <div class="footer-hakkimda-aciklama">
+                        Hakkımda
+                    </div>
+                }
+                else
+                {
+                    <div class="footer-hakkimda-aciklama">
+                        @item.HakkimdaAciklama
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<EmreOzyildirimBlog.Models.Entities.BloggerAdi>
+
+@if (Model.Count() == 0)
+{
+
+    <div class="logo">
+        <div class="logo-ic">
+            <div class="logo-ic-sol">
+                BLOGGER ADI
+            </div>
+            <div class="logo-ic-sag">
+                KISA TANIM SATIRI
+            </div>
+        </div>
+    </div>
+
+}
+else
+{
+    foreach (var item in Model)
+    {
+        <div class="logo">
+            <div class="logo-ic">
+                @if (item.BloggerIsim != null)
+                {
+                    <div class="logo-ic-sol">
+                        @item.BloggerIsim
+                    </div>
+                }
+                else if (item.BloggerIsim == null)
+                {
+                    <div class="logo-ic-sol">
+                        EMRE ÖZYİLDİRİM
+                    </div>
+                }
+                @if (item.Slogan != null)
+                {
+                    <div class="logo-ic-sag">
+                        @item.Slogan
+                    </div>
+                }
+                else if (item.Slogan == null)
+                {
+                    <div class="logo-ic-sag">
+                        KISA TANIM SATIRI
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

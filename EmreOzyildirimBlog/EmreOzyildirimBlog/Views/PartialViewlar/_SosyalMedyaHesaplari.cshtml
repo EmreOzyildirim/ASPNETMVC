@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EmreOzyildirimBlog.Models.Entities.SosyalMedyaHesaplari>
+
+@if (Model.Count() == 0)
+{
+    <div class="menu-sosyal-ikonlar">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        <div class="menu-sosyal-ikonlar">
+
+            @if (item.FacebookAktif)
+            {
+                <a href="@item.FacebookLink"><i class="fab fa-facebook-square"></i></a>
+            }
+
+            @if (item.InstagramAktif)
+            {
+                <a href="@item.InstagramLink"><i class="fab fa-instagram"></i></a>
+            }
+
+            @if (item.LinkedinAktif)
+            {
+
+                <a href="@item.LinkedinLink"><i class="fab fa-linkedin"></i></a>
+            }
+
+        </div>
+    }
+}

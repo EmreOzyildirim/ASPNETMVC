@@ -1,0 +1,74 @@
+﻿@model EmreOzyildirimBlog.Models.Entities.SosyalMedyaHesaplari
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>SosyalMedyaHesaplari</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FacebookAktif)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FacebookAktif)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FacebookLink)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FacebookLink)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.InstagramAktif)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.InstagramAktif)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.InstagramLink)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.InstagramLink)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkedinAktif)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LinkedinAktif)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkedinLink)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LinkedinLink)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

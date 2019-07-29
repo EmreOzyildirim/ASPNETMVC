@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <!--Raleway Font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    <!--Responsive Menü-->
+    <div class="menu-alan">
+        <div class="menu-ic-alan">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-ic">
+                        <div class="logo-ic-sol">
+                            EMRE ÖZYİLDİRİM
+                        </div>
+                        <div class="logo-ic-sag">
+                            Kişisel Blog Sayfası
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <nav class="nav">
+                        <a class="nav-link active" href="index.html">Blog</a>
+                        <a class="nav-link" href="tecrubelerim.html">Tecrübelerim</a>
+                        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+                        <a class="nav-link" href="iletisim.html">İletişim </a>
+                    </nav>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="menu-sosyal-ikonlar">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Responsive Menü Sonu-->
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-hakkimda">
+                    <div class="footer-hakkimda-baslik">
+                        Hakkımda
+                        <hr>
+                    </div>
+                    <div class="footer-hakkimda-aciklama">
+                        Curabitur dictum vulputate augue, a consequat libero porttitor at. Donec ut felis vehicula, dapibus quam at, scelerisque puruts. Integer arcu mauris, vulputate vitae suscipit nec, pharetra ac eros. Fusce vitae orci interdum, laoreet nisi a, congue sapien.
+                    </div>
+                </div>
+                <div class="col-md-4 footer-son-postlar">
+                    <div class="footer-son-postlar-baslik">
+                        Son Paylaşılan
+                        <hr>
+                    </div>
+                    <div class="footer-son-postlar-icerik">
+                        <div class="footer-son-postlar-item">
+                            <a href="#" class="son-postlar-item-link">Awesome Standart Post</a>
+                        </div>
+                        <div class="footer-son-postlar-item">
+                            <a href="#" class="son-postlar-item-link">Awesome Standart Post</a>
+                        </div>
+                        <div class="footer-son-postlar-item">
+                            <a href="#" class="son-postlar-item-link">Awesome Standart Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-instagram">
+                    <div class="footer-instagram-baslik">
+                        Instagram
+                        <hr>
+                    </div>
+                    <div>
+
+                        <!-- SnapWidget -->
+                        <iframe src="https://snapwidget.com/embed/673523" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:360px; height:180px"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-alani">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-designed-by">
+                            Developed &amp; Designed by <a href="emreozyildirim.com" class="f-db-link">EmreOzyildirim</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-menu">
+                            <nav class="nav nav-pills">
+                                <a class="nav-item nav-link" href="#">Tecrübelerim</a>
+                                <a class="nav-item nav-link" href="#">Hakkımda</a>
+                                <a class="nav-item nav-link" href="#">Blog</a>
+                                <a class="nav-item nav-link" href="#">İletişim</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

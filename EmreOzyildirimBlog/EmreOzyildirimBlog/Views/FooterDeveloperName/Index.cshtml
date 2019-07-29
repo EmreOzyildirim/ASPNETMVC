@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EmreOzyildirimBlog.Models.Entities.FooterDeveloperName>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DevelopedAndDesignedText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeveloperName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeveloperLink)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DevelopedAndDesignedText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeveloperName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeveloperLink)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

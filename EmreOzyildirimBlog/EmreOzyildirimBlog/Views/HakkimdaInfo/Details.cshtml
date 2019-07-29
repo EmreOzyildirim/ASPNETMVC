@@ -1,0 +1,74 @@
+﻿@model EmreOzyildirimBlog.Models.Entities.HakkimdaInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>HakkimdaInfo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.HakkimdaBaslik)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HakkimdaBaslik)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProfilResmiAdresi)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProfilResmiAdresi)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.HakkimdaAciklama)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HakkimdaAciklama)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.IlkOkul)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IlkOkul)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Lise)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Lise)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Universite)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Universite)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

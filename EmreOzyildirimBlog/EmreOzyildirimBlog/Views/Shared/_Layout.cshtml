@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <!--Raleway Font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    <!--Responsive Menü-->
+    <div class="menu-alan">
+        <div class="menu-ic-alan">
+            <div class="container">
+                @Html.Action("_BloggerAdi", "PartialViewlar")
+                <div class="menu">
+                    <nav class="nav">
+                        @Html.ActionLink("Blog", "", "Home", null, new { @class = "nav-link" })
+                        @Html.ActionLink("Tecrübelerim", "Tecrubelerim", "Home", null, new { @class = "nav-link" })
+                        @Html.ActionLink("Hakkımda", "Hakkimda", "Home", null, new { @class = "nav-link" })
+                        @Html.ActionLink("İletişim", "Iletisim", "Home", null, new { @class = "nav-link" })
+                    </nav>
+                </div>
+                <div style="clear: both;"></div>
+                @Html.Action("_SosyalMedyaHesaplari", "PartialViewlar")
+            </div>
+        </div>
+    </div>
+    <!--Responsive Menü Sonu-->
+
+    @RenderBody()
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                    <!--Footer Hakkımda Action-->
+                <div class="col-md-4 footer-son-postlar">
+                    <div class="footer-son-postlar-baslik">
+                        Son Paylaşılan
+                        <hr>
+                    </div>
+                    <div class="footer-son-postlar-icerik">
+                        <div class="footer-son-postlar-item">
+                            <a href="#" class="son-postlar-item-link">Awesome Standart Post</a>
+                        </div>
+                        <div class="footer-son-postlar-item">
+                            <a href="#" class="son-postlar-item-link">Awesome Standart Post</a>
+                        </div>
+                        <div class="footer-son-postlar-item">
+                            <a href="#" class="son-postlar-item-link">Awesome Standart Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-instagram">
+                    <div class="footer-instagram-baslik">
+                        Instagram
+                        <hr>
+                    </div>
+                    <div>
+
+                        <!-- SnapWidget -->
+                        <iframe src="https://snapwidget.com/embed/673523" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:360px; height:180px"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-alani">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--Hear Copyrights, developer name and developer link-->
+                        @Html.Action("_DeveloperInfo", "PartialViewlar")
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-menu">
+                            <nav class="nav nav-pills">
+                                <a class="nav-item nav-link" href="#">Tecrübelerim</a>
+                                <a class="nav-item nav-link" href="#">Hakkımda</a>
+                                <a class="nav-item nav-link" href="#">Blog</a>
+                                <a class="nav-item nav-link" href="#">İletişim</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jquery -->
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap min js -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!--Popper min js-->
+    <script src="~/Scripts/popper.min.js"></script>
+</body>
+</html>

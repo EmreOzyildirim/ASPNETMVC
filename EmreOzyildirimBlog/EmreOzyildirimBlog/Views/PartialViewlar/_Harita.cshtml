@@ -1,0 +1,40 @@
+﻿@using EmreOzyildirimBlog.Models.Entities;
+@model IEnumerable<HaritaAktifMi>
+
+@if (Model.Count() == 0)
+{
+    <div class="col-md-12 col-paddingsiz">
+        <div class="iletisim-header-alani">
+            <div class="resim-yazisi">
+                Emre Özyıldırım İletişim Bilgileri
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    foreach (var item in Model)
+    {
+
+        if (item.aktifMi == true)
+        {
+            <!-- harita-embedi class'inin içindeki iframe'nin width özelliğine 100% verilecek -->
+            <div class="row harita-embedi">
+                <iframe src="https://www.google.com/maps/embed?pb=" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        }
+        else if (item.aktifMi == false)
+        {
+
+            <div class="col-md-12 col-paddingsiz">
+                <div class="iletisim-header-alani">
+                    <div class="resim-yazisi">
+                        Emre Özyıldırım İletişim Bilgileri
+                    </div>
+                </div>
+            </div>
+
+        }
+
+    }
+}
